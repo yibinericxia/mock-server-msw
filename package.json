@@ -4,14 +4,26 @@
   "description": "Mock server using MSW",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mswjs/http-middleware": "^0.10.2",
+    "express": "^4.21.1",
     "msw": "^2.6.3"
   },
   "devDependencies": {
-    "typescript": "^5.6.3"
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
